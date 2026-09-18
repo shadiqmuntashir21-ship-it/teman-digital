@@ -13,10 +13,11 @@ type State = {
 const services = [
   "Landing Page",
   "Website Company Profile",
-  "Website UMKM & Bisnis",
   "Website Portofolio",
+  "Website UMKM & Katalog",
   "Website Organisasi & Komunitas",
-  "Aplikasi Web & Dashboard Sederhana",
+  "Dashboard & Sistem Informasi",
+  "LMS / E-Learning",
   "Saya belum yakin"
 ];
 
@@ -24,22 +25,25 @@ const goals = [
   "Mengenalkan usaha atau layanan",
   "Menampilkan portofolio atau karya",
   "Membuat organisasi lebih mudah ditemukan",
-  "Mengarahkan calon pelanggan ke WhatsApp",
-  "Mengelola data atau form secara online",
-  "Membuat kebutuhan digital lainnya"
+  "Mengarahkan calon pengguna ke WhatsApp",
+  "Mengelola data atau proses internal",
+  "Membuat pembelajaran online / LMS",
+  "Kebutuhan digital lainnya"
 ];
 
 const featureOptions = [
   "WhatsApp",
   "Form Kontak",
   "Galeri",
-  "Daftar Produk/Layanan",
-  "Lokasi / Maps",
+  "Katalog Produk/Layanan",
   "Login",
+  "Admin Panel",
   "Dashboard",
   "Database",
-  "Upload File",
-  "Berita / Kegiatan"
+  "Laporan",
+  "Materi / Kelas",
+  "Tugas / Progress",
+  "Upload File"
 ];
 
 const styles = ["Clean & Minimal","Elegan","Modern","Profesional","Kreatif"];
@@ -105,17 +109,17 @@ export function ProjectBuilder() {
   }
 
   const screens = [
-    { eyebrow:"01 / KEBUTUHAN", title:"Mau dibuatkan apa?", description:"Pilih yang paling mendekati. Kalau belum yakin, aman — nanti kami bantu arahkan.",
+    { eyebrow:"01 / KEBUTUHAN", title:"Mau dibuatkan apa?", description:"Pilih yang paling mendekati. Kalau belum yakin, nanti kami bantu arahkan.",
       content:<div className="option-grid">{services.map(item=><Choice key={item} label={item} selected={state.service===item} onClick={()=>setSingle("service",item)} />)}</div> },
-    { eyebrow:"02 / TUJUAN", title:"Kamu ingin hasil akhirnya seperti apa?", description:"Biar kami tidak sekadar bikin halaman, tapi benar-benar menyelesaikan kebutuhanmu.",
+    { eyebrow:"02 / TUJUAN", title:"Apa hasil yang ingin dicapai?", description:"Supaya solusi yang dibuat benar-benar menjawab kebutuhan, bukan sekadar menambah fitur.",
       content:<div className="option-grid">{goals.map(item=><Choice key={item} label={item} selected={state.goal===item} onClick={()=>setSingle("goal",item)} />)}</div> },
-    { eyebrow:"03 / FITUR", title:"Apa yang perlu ada?", description:"Boleh pilih lebih dari satu. Fitur final tetap menyesuaikan kebutuhan dan budget.",
+    { eyebrow:"03 / FITUR", title:"Apa yang perlu ada?", description:"Boleh pilih lebih dari satu. Fitur final tetap disesuaikan dengan kebutuhan dan budget.",
       content:<div className="option-grid">{featureOptions.map(item=><Choice key={item} label={item} selected={state.features.includes(item)} onClick={()=>toggleFeature(item)} />)}</div> },
     { eyebrow:"04 / GAYA", title:"Tampilan seperti apa yang kamu suka?", description:"Supaya dari awal kami sudah punya arah visual yang pas.",
       content:<div className="option-grid">{styles.map(item=><Choice key={item} label={item} selected={state.design_style===item} onClick={()=>setSingle("design_style",item)} />)}</div> },
     { eyebrow:"05 / WAKTU", title:"Kapan ingin mulai?", description:"Kami gunakan ini untuk menyesuaikan prioritas dan alur pengerjaan.",
       content:<div className="option-grid">{timelines.map(item=><Choice key={item} label={item} selected={state.timeline===item} onClick={()=>setSingle("timeline",item)} />)}</div> },
-    { eyebrow:"06 / BUDGET", title:"Budget yang paling nyaman?", description:"Semua paket kami berada di kisaran Rp300 ribu sampai Rp700 ribu untuk kebutuhan web sederhana.",
+    { eyebrow:"06 / BUDGET", title:"Budget yang paling nyaman?", description:"Range utama kami Rp300 ribu sampai Rp700 ribu. Scope disepakati dulu sebelum pengerjaan.",
       content:<div className="option-grid">{budgets.map(item=><Choice key={item} label={item} selected={state.budget===item} onClick={()=>setSingle("budget",item)} />)}</div> },
     { eyebrow:"07 / KONTAK", title:"Kami hubungi ke mana?", description:"Isi singkat saja. Setelah ini bisa langsung lanjut lewat WhatsApp.",
       content:<div className="builder-fields">
