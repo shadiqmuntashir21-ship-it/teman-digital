@@ -13,7 +13,7 @@
   --accent-soft:#eef0ff;
   --navy:#111a2c;
   --navy-2:#18243a;
-  --green:#1f8b66;
+  --chat:#111a2c;
   --max:1180px;
 }
 
@@ -400,8 +400,8 @@ button{color:inherit}
   position:fixed;z-index:60;right:18px;bottom:18px;
   display:flex;align-items:center;gap:9px;
   padding:8px 14px 8px 8px;
-  border-radius:999px;background:var(--green);color:#fff;
-  box-shadow:0 14px 35px rgba(31,139,102,.24);
+  border-radius:999px;background:var(--chat);color:#fff;
+  box-shadow:0 14px 35px rgba(17,26,44,.20);
   font-size:12px;font-weight:700;
 }
 .wa-dot{
@@ -726,14 +726,6 @@ button{color:inherit}
   font-size:13px;
 }
 .hero-price-note strong{color:var(--ink)}
-.wa-float{
-  background:rgba(17,26,44,.95);
-  color:#fff;
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow:0 14px 35px rgba(17,26,44,.20);
-  backdrop-filter:blur(12px);
-}
-.wa-dot{background:rgba(255,255,255,.12)}
 @media(max-width:980px){
   .hero-visual-wrap{max-width:720px}
   .hero-visual{min-height:560px}

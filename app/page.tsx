@@ -65,6 +65,7 @@ export default async function HomePage() {
                 <img
                   src="https://images.pexels.com/photos/8069510/pexels-photo-8069510.jpeg?auto=compress&cs=tinysrgb&w=1200"
                   alt="Perempuan berhijab bekerja menggunakan laptop di ruang kerja modern"
+                  fetchPriority="high"
                 />
                 <div className="hero-visual-shade" />
                 <div className="hero-visual-top">
