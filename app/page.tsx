@@ -62,9 +62,9 @@ export default async function HomePage() {
 
               <Reveal delay={0.22}>
                 <div className="hero-proof">
-                  <span>Rp300–700 ribu</span>
-                  <span>Nyaman di HP</span>
-                  <span>Bisa konsultasi dulu</span>
+                  <span>Mulai Rp300 ribu</span>
+                  <span>Kualitas tetap serius</span>
+                  <span>Langsung konsultasi WA</span>
                 </div>
               </Reveal>
             </div>
@@ -105,6 +105,23 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <section className="quality-strip" aria-label="Keunggulan singkat">
+        <div className="container quality-grid">
+          <div className="quality-item">
+            <span className="quality-no">01</span>
+            <div><strong>Harga bersahabat</strong><p>Mulai Rp300 ribu dengan scope yang dijelaskan dari awal.</p></div>
+          </div>
+          <div className="quality-item">
+            <span className="quality-no">02</span>
+            <div><strong>Tetap terlihat profesional</strong><p>Desain rapi, responsive, dan tidak terasa seperti template asal jadi.</p></div>
+          </div>
+          <div className="quality-item">
+            <span className="quality-no">03</span>
+            <div><strong>Gampang mulai</strong><p>Tidak punya brief? Ceritakan kebutuhan lewat WhatsApp, kami bantu arahkan.</p></div>
+          </div>
+        </div>
+      </section>
+
       <Marquee />
 
       <section className="section work-section" id="work">
@@ -113,12 +130,12 @@ export default async function HomePage() {
             <Reveal>
               <div>
                 <div className="eyebrow">KARYA PILIHAN</div>
-                <h2 className="section-title">Biar hasil yang bicara.</h2>
+                <h2 className="section-title">Lihat project nyata, bukan sekadar janji.</h2>
               </div>
             </Reveal>
             <Reveal delay={0.08}>
               <p className="lead">
-                Portfolio bisa langsung membuka website atau aplikasi live. Tidak cuma screenshot yang diam.
+                Tiga project berikut bisa dibuka langsung. Lihat sendiri kualitas tampilan dan pengalaman yang sudah dibuat.
               </p>
             </Reveal>
           </div>
@@ -129,7 +146,7 @@ export default async function HomePage() {
                 const thumb = projectThumbnail(project);
                 return (
                   <Reveal key={project.id} delay={Math.min(index * 0.05, 0.2)}>
-                    <article className="portfolio-card">
+                    <article className={`portfolio-card ${index === 0 ? "featured-work" : ""}`}>
                       <a
                         href={project.preview_url || `/projects/${project.slug}`}
                         target={project.preview_url ? "_blank" : undefined}
@@ -185,12 +202,12 @@ export default async function HomePage() {
             <Reveal>
               <div>
                 <div className="eyebrow">LAYANAN</div>
-                <h2 className="section-title">Pilih kebutuhan, bukan sekadar paket.</h2>
+                <h2 className="section-title">Dari website sampai sistem custom.</h2>
               </div>
             </Reveal>
             <Reveal delay={0.08}>
               <p className="lead">
-                Mulai dari website sederhana sampai dashboard, sistem informasi, dan LMS untuk kebutuhan khusus.
+                Pilih sesuai kebutuhan. Kalau belum tahu istilahnya, cukup ceritakan masalahnya — kami bantu tentukan solusinya.
               </p>
             </Reveal>
           </div>
@@ -286,12 +303,12 @@ export default async function HomePage() {
             <Reveal>
               <div>
                 <div className="eyebrow">KISARAN HARGA</div>
-                <h2 className="section-title">Harga sederhana, pilihan lebih jelas.</h2>
+                <h2 className="section-title">Harga jelas. Hasil tetap terlihat serius.</h2>
               </div>
             </Reveal>
             <Reveal delay={0.08}>
               <p className="lead">
-                Range utama Rp300 ribu sampai Rp700 ribu. Pilih titik awalnya, lalu scope disesuaikan sebelum pengerjaan.
+                Mulai Rp300 ribu sampai Rp700 ribu. Cocok untuk yang ingin tampil profesional tanpa harus masuk budget jutaan.
               </p>
             </Reveal>
           </div>

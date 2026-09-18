@@ -5,12 +5,12 @@ import { WhatsAppFloat } from "@/components/whatsapp-float";
 
 export const metadata: Metadata = {
   title: {
-    default: "Teman Digital — Website & Solusi Berbasis Web",
+    default: "Teman Digital — Website & Sistem Web Mulai Rp300 Ribu",
     template: "%s — Teman Digital",
   },
   description:
-    "Jasa pembuatan landing page, website portofolio, company profile, website UMKM, organisasi, komunitas, dan aplikasi web sederhana.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+    "Jasa pembuatan website, portofolio, company profile, dashboard, sistem informasi, dan LMS dengan tampilan profesional dan harga Rp300–700 ribu.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://teman-digital.vercel.app"),
 };
 
 export const viewport: Viewport = {
