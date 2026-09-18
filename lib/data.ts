@@ -56,10 +56,10 @@ const fallbackValues: ValuePoint[] = [
 const fallbackSettings: SiteSettings = {
   brand_name:"Teman Digital",
   hero_eyebrow:"WEBSITE • DASHBOARD • SISTEM BERBASIS WEB",
-  hero_title:"Website yang terlihat serius. Harga tetap masuk akal.",
-  hero_description:"Untuk personal, UMKM, sekolah, organisasi, komunitas, dan kebutuhan internal. Rapi di desktop, nyaman di HP, dan jelas scope-nya sejak awal.",
-  final_cta_title:"Ada yang ingin dibuat?",
-  final_cta_description:"Kirim kebutuhanmu lewat WhatsApp. Kami bantu mulai dari arah yang paling masuk akal.",
+  hero_title:"Website yang rapi, meyakinkan, dan tetap terjangkau.",
+  hero_description:"Untuk UMKM, sekolah, organisasi, komunitas, portofolio, dan kebutuhan sistem berbasis web.",
+  final_cta_title:"Punya ide project?",
+  final_cta_description:"Ceritakan singkat. Kami bantu pilih bentuk web yang paling pas.",
   footer_tagline:"Website • Dashboard • Sistem Web",
   whatsapp:"082258687238",email:null,instagram_url:null,linkedin_url:null,github_url:null,
 };

@@ -48,7 +48,7 @@ const featureOptions = [
 
 const styles = ["Clean & Minimal","Elegan","Modern","Profesional","Kreatif"];
 const timelines = ["Secepatnya","1–2 minggu","Bulan ini","Bulan depan","Masih rencana"];
-const budgets = ["Rp300 ribu","Rp400 ribu","Rp500 ribu","Rp600 ribu","Rp700 ribu","Belum yakin"];
+const budgets = ["Rp300 ribu","Rp400 ribu","Rp500 ribu","Belum yakin"];
 
 const initialState: State = { service:"",goal:"",features:[],design_style:"",timeline:"",budget:"",name:"",business_name:"",phone:"",email:"",notes:"" };
 const WA_BASE="https://wa.me/6282258687238";
@@ -119,7 +119,7 @@ export function ProjectBuilder() {
       content:<div className="option-grid">{styles.map(item=><Choice key={item} label={item} selected={state.design_style===item} onClick={()=>setSingle("design_style",item)} />)}</div> },
     { eyebrow:"05 / WAKTU", title:"Kapan ingin mulai?", description:"Kami gunakan ini untuk menyesuaikan prioritas dan alur pengerjaan.",
       content:<div className="option-grid">{timelines.map(item=><Choice key={item} label={item} selected={state.timeline===item} onClick={()=>setSingle("timeline",item)} />)}</div> },
-    { eyebrow:"06 / BUDGET", title:"Budget yang paling nyaman?", description:"Range utama kami Rp300 ribu sampai Rp700 ribu. Scope disepakati dulu sebelum pengerjaan.",
+    { eyebrow:"06 / BUDGET", title:"Budget yang paling nyaman?", description:"Range paket kami Rp300 ribu sampai Rp500 ribu. Scope disepakati dulu sebelum pengerjaan.",
       content:<div className="option-grid">{budgets.map(item=><Choice key={item} label={item} selected={state.budget===item} onClick={()=>setSingle("budget",item)} />)}</div> },
     { eyebrow:"07 / KONTAK", title:"Kami hubungi ke mana?", description:"Isi singkat saja. Setelah ini bisa langsung lanjut lewat WhatsApp.",
       content:<div className="builder-fields">

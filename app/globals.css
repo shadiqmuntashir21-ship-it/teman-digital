@@ -738,3 +738,39 @@ button{color:inherit}
   .hero-visual-tags{margin-top:15px}
   .hero-price-note{margin-top:18px}
 }
+
+/* Final conversion layout */
+.hero-final{padding:150px 0 72px;min-height:auto;background:radial-gradient(circle at 75% 20%,rgba(89,101,216,.11),transparent 28rem),#f8f7f3}
+.hero-final-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.85fr);gap:54px;align-items:center}
+.hero-final .display{max-width:700px;font-size:clamp(46px,5vw,72px)}
+.hero-final .hero-lead{max-width:590px}
+.hero-price-pill{display:inline-flex;margin-top:22px;padding:9px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#5f6875;font-size:12px;font-weight:650}
+.hero-character-wrap{min-height:500px}
+.hero-character-stage{position:relative;min-height:500px;display:flex;align-items:flex-end;justify-content:center;isolation:isolate}
+.hero-orbit{position:absolute;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle at 45% 40%,rgba(110,121,255,.22),rgba(110,121,255,.08) 48%,transparent 72%);filter:blur(2px);z-index:-1}
+.hero-character{position:relative;z-index:1;display:block;width:min(76%,330px);height:auto;filter:drop-shadow(0 24px 24px rgba(22,29,47,.16));animation:heroCharacterFloat 5s ease-in-out infinite}
+.hero-badge{position:absolute;z-index:2;min-width:150px;padding:12px 14px;border:1px solid rgba(18,24,38,.08);border-radius:16px;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);box-shadow:0 12px 32px rgba(18,24,38,.08)}
+.hero-badge strong{display:block;font-size:13px}.hero-badge span{display:block;margin-top:4px;color:var(--muted);font-size:10px}
+.hb1{top:74px;right:0}.hb2{top:205px;left:0}.hb3{bottom:52px;right:12px}
+@keyframes heroCharacterFloat{50%{transform:translateY(-9px)}}
+
+.compact-head{margin-bottom:34px}.compact-head .lead{max-width:430px}
+.final-project-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.final-portfolio-card{display:flex;flex-direction:column}.final-portfolio-card .portfolio-thumb{aspect-ratio:16/10;padding:8px}
+.final-portfolio-card .portfolio-copy{display:flex;flex:1;flex-direction:column;padding:20px}
+.final-portfolio-card .portfolio-copy h3{font-size:23px;margin:8px 0}
+.clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.portfolio-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto;padding-top:18px}.small-btn{min-height:40px;padding:0 12px;font-size:12px}
+
+.service-simple-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.service-simple{display:grid;grid-template-columns:42px 1fr;gap:15px;padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.72)}
+.service-simple h3{margin:0 0 8px;font-size:23px;letter-spacing:-.035em}.service-simple p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+
+.process-compact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.process-mini{padding:24px;border-top:1px solid var(--line);background:transparent}.process-mini>span{font:500 10px/1 "DM Mono",monospace;color:var(--soft)}.process-mini h3{margin:20px 0 8px;font-size:24px;letter-spacing:-.035em}.process-mini p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+
+.final-cta-dark{padding:92px 0;background:linear-gradient(145deg,#111a2c,#18243a);color:#fff}
+.final-cta-dark h2{color:#fff}.final-cta-dark p{color:#bac4d3}.final-light-btn{margin-top:26px;background:#fff;color:#111a2c;border-color:#fff}
+.final-light-btn:hover{background:#f2f4f7}
+@media(max-width:980px){.hero-final-grid{grid-template-columns:1fr}.hero-character-wrap{max-width:650px}.final-project-grid{grid-template-columns:1fr 1fr}.service-simple-grid{grid-template-columns:1fr}.process-compact{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.hero-final{padding:112px 0 54px}.hero-final-grid{gap:24px}.hero-character-wrap,.hero-character-stage{min-height:400px}.hero-character{width:min(78%,280px)}.hero-orbit{width:300px;height:300px}.hero-badge{min-width:126px;padding:10px 11px}.hb1{top:45px}.hb2{top:165px}.hb3{bottom:28px}.final-project-grid{grid-template-columns:1fr}.portfolio-actions{grid-template-columns:1fr 1fr}.final-cta-dark{padding:72px 0}}
