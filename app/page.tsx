@@ -4,6 +4,8 @@ import { Marquee } from "@/components/marquee";
 import { Reveal } from "@/components/reveal";
 import { getHomeData, projectThumbnail } from "@/lib/data";
 
+export const dynamic = "force-dynamic";
+
 const WA_BASE = "https://wa.me/6282258687238";
 
 function wa(text: string) {

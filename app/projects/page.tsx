@@ -3,6 +3,8 @@ import { Navbar } from "@/components/navbar";
 import { Reveal } from "@/components/reveal";
 import { getProjects, projectThumbnail } from "@/lib/data";
 
+export const dynamic = "force-dynamic";
+
 export const metadata={title:"Karya",description:"Website, dashboard, dan aplikasi yang pernah dikerjakan Teman Digital."};
 
 export default async function ProjectsPage(){
