@@ -4,6 +4,7 @@ import { Reveal } from "@/components/reveal";
 import { getHomeData, projectThumbnail } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
+// Final simplified conversion layout.
 
 const WA_BASE = "https://wa.me/6282258687238";
 const wa = (text:string) => `${WA_BASE}?text=${encodeURIComponent(text)}`;
