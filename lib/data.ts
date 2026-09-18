@@ -23,38 +23,40 @@ export type SiteSettings = {
 };
 
 const fallbackServices: Service[] = [
-  {id:"1",slug:"landing-page",title:"Landing Page",eyebrow:"CONVERT",short_description:"Halaman fokus untuk campaign, produk, event, dan penawaran yang ingin menghasilkan tindakan.",description:null,features:[],starting_price:"Mulai dari Rp2,5 jt",display_order:1},
-  {id:"2",slug:"business-website",title:"Business Website",eyebrow:"TRUST",short_description:"Website profesional yang membuat bisnis terlihat lebih serius dan mudah dipercaya.",description:null,features:[],starting_price:"Mulai dari Rp4,5 jt",display_order:2},
-  {id:"3",slug:"dashboard",title:"Dashboard & System",eyebrow:"CONTROL",short_description:"Ubah data dan proses manual menjadi dashboard yang lebih sederhana dan terukur.",description:null,features:[],starting_price:"Custom",display_order:3},
-  {id:"4",slug:"web-application",title:"Web Application",eyebrow:"BUILD",short_description:"Produk digital dengan alur, fitur, dan logic yang dibuat sesuai ide bisnis.",description:null,features:[],starting_price:"Custom",display_order:4},
+  {id:"1",slug:"landing-page",title:"Landing Page",eyebrow:"PROMOSI",short_description:"Satu halaman fokus untuk promosi, campaign, produk, event, atau informasi penting.",description:null,features:[],starting_price:"Mulai Rp300 ribu",display_order:1},
+  {id:"2",slug:"company-profile",title:"Website Company Profile",eyebrow:"PROFESIONAL",short_description:"Website profil usaha, lembaga, sekolah, atau layanan agar terlihat lebih rapi dan terpercaya.",description:null,features:[],starting_price:"Mulai Rp400 ribu",display_order:2},
+  {id:"3",slug:"business-website",title:"Website UMKM & Bisnis",eyebrow:"USAHA",short_description:"Website untuk usaha lokal yang ingin menjelaskan produk, layanan, dan kontak dengan lebih jelas.",description:null,features:[],starting_price:"Mulai Rp500 ribu",display_order:3},
+  {id:"4",slug:"portfolio-website",title:"Website Portofolio",eyebrow:"PERSONAL",short_description:"Website untuk menampilkan karya, pengalaman, project, profil profesional, atau personal branding.",description:null,features:[],starting_price:"Mulai Rp350 ribu",display_order:4},
+  {id:"5",slug:"organization-website",title:"Website Organisasi & Komunitas",eyebrow:"KOMUNITAS",short_description:"Website untuk komunitas, organisasi, himpunan, yayasan, sekolah, atau kelompok kegiatan.",description:null,features:[],starting_price:"Mulai Rp450 ribu",display_order:5},
+  {id:"6",slug:"web-app-dashboard",title:"Aplikasi Web & Dashboard",eyebrow:"SISTEM WEB",short_description:"Solusi berbasis web sederhana untuk kebutuhan data, form, dashboard, atau alur kerja tertentu.",description:null,features:[],starting_price:"Mulai Rp700 ribu",display_order:6},
 ];
 const fallbackPricing: Pricing[] = [
-  {id:"1",slug:"starter",name:"Starter",description:"Untuk bisnis yang ingin mulai hadir secara profesional.",price_label:"Mulai Rp2,5 jt",features:["Landing page","Responsive design","WhatsApp integration","Basic SEO","Deployment"],cta_label:"Pilih Starter",featured:false,display_order:1},
-  {id:"2",slug:"business",name:"Business",description:"Untuk bisnis yang membutuhkan website lebih lengkap dan fleksibel.",price_label:"Mulai Rp4,5 jt",features:["Multi-page website","Custom UI","CMS ready","Analytics","SEO setup"],cta_label:"Pilih Business",featured:true,display_order:2},
-  {id:"3",slug:"custom",name:"Custom",description:"Untuk dashboard, web app, dan sistem dengan kebutuhan khusus.",price_label:"Mari diskusi",features:["Dashboard","Database","Authentication","API integration","Custom workflow"],cta_label:"Diskusikan Project",featured:false,display_order:3},
+  {id:"1",slug:"hemat",name:"Hemat",description:"Untuk kebutuhan sederhana yang ingin cepat online dan tetap terlihat rapi.",price_label:"Rp300 ribu",features:["1 halaman utama","Responsive mobile","CTA WhatsApp","Basic SEO","Deploy"],cta_label:"Tanya Paket Hemat",featured:false,display_order:1},
+  {id:"2",slug:"standar",name:"Standar",description:"Untuk website yang butuh lebih banyak informasi, section, dan tampilan lebih lengkap.",price_label:"Rp500 ribu",features:["Beberapa section/halaman","Responsive mobile","WhatsApp & kontak","Galeri/layanan","Revisi ringan"],cta_label:"Pilih Paket Standar",featured:true,display_order:2},
+  {id:"3",slug:"lengkap",name:"Lengkap",description:"Untuk kebutuhan yang lebih kompleks dalam batas project web sederhana.",price_label:"Rp700 ribu",features:["Struktur lebih lengkap","Komponen interaktif","Form atau data sederhana","Responsive mobile","Pendampingan setup"],cta_label:"Diskusikan Paket Lengkap",featured:false,display_order:3},
 ];
 const fallbackProcess: ProcessStep[] = [
-  {id:"1",step_no:1,title:"Kenalan dulu",description:"Kami pahami bisnis, target, karakter brand, dan apa yang benar-benar ingin dicapai.",display_order:1},
+  {id:"1",step_no:1,title:"Kenalan dulu",description:"Kami pahami kebutuhan, target, dan hasil yang benar-benar ingin dicapai.",display_order:1},
   {id:"2",step_no:2,title:"Susun arah",description:"Struktur, konsep visual, dan pengalaman pengguna dirancang supaya semuanya terasa masuk akal.",display_order:2},
-  {id:"3",step_no:3,title:"Mulai dibangun",description:"Desain diubah menjadi website atau sistem fullstack yang responsive dan terintegrasi.",display_order:3},
+  {id:"3",step_no:3,title:"Mulai dibangun",description:"Desain diubah menjadi website atau sistem berbasis web yang responsive dan rapi.",display_order:3},
   {id:"4",step_no:4,title:"Review detail",description:"Kami cek alur, tampilan, performa, dan merapikan bagian yang masih terasa kurang.",display_order:4},
-  {id:"5",step_no:5,title:"Siap diluncurkan",description:"Project dideploy, dicek kembali, lalu siap digunakan dan ditunjukkan ke dunia.",display_order:5},
+  {id:"5",step_no:5,title:"Siap diluncurkan",description:"Project dideploy, dicek kembali, lalu siap digunakan dan dibagikan.",display_order:5},
 ];
 const fallbackValues: ValuePoint[] = [
-  {id:"1",label:"01",title:"Desain yang punya alasan",description:"Bukan sekadar mengikuti tren. Setiap bagian disusun untuk membantu orang memahami dan mempercayai bisnis Anda.",display_order:1},
-  {id:"2",label:"02",title:"Teknologi modern",description:"Struktur yang bersih, cepat, dan fleksibel untuk berkembang ketika kebutuhan bisnis bertambah.",display_order:2},
-  {id:"3",label:"03",title:"Halus saat digunakan",description:"Animasi, scrolling, dan interaksi dibuat terasa hidup tanpa membuat website berat atau melelahkan.",display_order:3},
-  {id:"4",label:"04",title:"Fokus ke bisnis",description:"Tujuan akhirnya bukan hanya terlihat keren, tetapi membuat pengunjung ingin lanjut, bertanya, dan mengambil tindakan.",display_order:4},
+  {id:"1",label:"01",title:"Desain yang punya alasan",description:"Bukan sekadar mengikuti tren. Setiap bagian disusun supaya pengunjung cepat paham dan nyaman.",display_order:1},
+  {id:"2",label:"02",title:"Sesuai kebutuhan",description:"Kami mulai dari masalah dan tujuan, lalu pilih bentuk web yang paling masuk akal.",display_order:2},
+  {id:"3",label:"03",title:"Nyaman di HP",description:"Layout, tombol, teks, dan alur dipikirkan untuk layar portrait, bukan hanya desktop.",display_order:3},
+  {id:"4",label:"04",title:"Mudah dihubungi",description:"WhatsApp menjadi jalur utama supaya calon pengguna tidak bingung harus mulai dari mana.",display_order:4},
 ];
 const fallbackSettings: SiteSettings = {
   brand_name:"Teman Digital",
-  hero_eyebrow:"DESAIN • DEVELOPMENT • DIGITAL EXPERIENCE",
-  hero_title:"Bikin bisnis terlihat lebih serius di dunia digital.",
-  hero_description:"Website, landing page, dashboard, dan aplikasi web yang dirancang dengan detail — modern, cepat, dan dibuat supaya orang betah melihat lebih jauh.",
-  final_cta_title:"Punya ide? Mari kita bikin serius.",
-  final_cta_description:"Ceritakan kebutuhanmu. Kami bantu mengubahnya menjadi pengalaman digital yang rapi, menarik, dan siap dipakai.",
-  footer_tagline:"Design • Development • Digital Experience",
-  whatsapp:null,email:null,instagram_url:null,linkedin_url:null,github_url:null,
+  hero_eyebrow:"WEBSITE • PORTOFOLIO • SISTEM BERBASIS WEB",
+  hero_title:"Punya kebutuhan digital? Biar kami bantu bikin lebih rapi, menarik, dan siap dipakai.",
+  hero_description:"Dari landing page, website portofolio, company profile, website komunitas, sampai aplikasi web sederhana — kami bantu pilih solusi yang pas tanpa bikin prosesnya ribet.",
+  final_cta_title:"Ada yang ingin dibuat? Ceritakan saja dulu.",
+  final_cta_description:"Konsultasi santai lewat WhatsApp. Kami bantu arahkan kebutuhanmu dan menyesuaikan solusi dengan budget yang masuk akal.",
+  footer_tagline:"Website • Portfolio • Web Solution",
+  whatsapp:"082258687238",email:null,instagram_url:null,linkedin_url:null,github_url:null,
 };
 
 export function projectThumbnail(project: Pick<Project,"cover_url"|"preview_url">) {

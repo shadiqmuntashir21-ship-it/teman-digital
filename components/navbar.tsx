@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const WA="https://wa.me/6282258687238?text=Halo%20Teman%20Digital%2C%20saya%20ingin%20konsultasi%20tentang%20kebutuhan%20website%2Fweb.";
+
 export function Navbar(){
   return <div className="nav-wrap">
     <nav className="nav" aria-label="Navigasi utama">
@@ -10,7 +12,7 @@ export function Navbar(){
         <Link href="/#process">Proses</Link>
         <Link href="/#pricing">Harga</Link>
       </div>
-      <Link href="/start-project" className="button primary">Mulai Project <span>↗</span></Link>
+      <a href={WA} target="_blank" rel="noreferrer" className="button primary nav-whatsapp"><span className="desktop-wa">Chat WhatsApp</span><span className="mobile-wa">WhatsApp</span><span>↗</span></a>
     </nav>
   </div>;
 }
