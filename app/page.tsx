@@ -5,6 +5,7 @@ import { Reveal } from "@/components/reveal";
 import { getHomeData, projectThumbnail } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
+// Homepage content is partly managed from Supabase.
 
 const WA_BASE = "https://wa.me/6282258687238";
 
