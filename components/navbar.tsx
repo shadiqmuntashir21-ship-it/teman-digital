@@ -12,7 +12,7 @@ export function Navbar(){
         <Link href="/#process">Proses</Link>
         <Link href="/#pricing">Harga</Link>
       </div>
-      <a href={WA} target="_blank" rel="noreferrer" className="button primary nav-whatsapp"><span className="desktop-wa">Chat WhatsApp</span><span className="mobile-wa">WhatsApp</span><span>↗</span></a>
+      <a href={WA} target="_blank" rel="noreferrer" className="button primary nav-whatsapp"><span className="desktop-wa">Mulai Project</span><span className="mobile-wa">Mulai</span><span>↗</span></a>
     </nav>
   </div>;
 }

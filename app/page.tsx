@@ -12,13 +12,6 @@ function wa(text: string) {
   return `${WA_BASE}?text=${encodeURIComponent(text)}`;
 }
 
-const heroCapabilities = [
-  ["01", "Website", "Promosi, profil, katalog, organisasi, dan portofolio."],
-  ["02", "Dashboard", "Data, admin panel, laporan, dan alur kerja internal."],
-  ["03", "Sistem Informasi", "Pendataan, pengajuan, monitoring, dan kebutuhan custom."],
-  ["04", "LMS / E-Learning", "Materi, tugas, progress, kelas, dan pembelajaran online."],
-];
-
 export default async function HomePage() {
   const { services, pricing, projects, process, values, settings } = await getHomeData();
 
@@ -54,72 +47,42 @@ export default async function HomePage() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Konsultasi WhatsApp <span>↗</span>
+                    Konsultasikan Project <span>↗</span>
                   </a>
                   <Link className="button" href="/projects">
-                    Lihat Karya <span>→</span>
+                    Lihat Hasil Kerja <span>→</span>
                   </Link>
                 </div>
               </Reveal>
 
               <Reveal delay={0.22}>
-                <div className="hero-proof">
-                  <span>Mulai Rp300 ribu</span>
-                  <span>Kualitas tetap serius</span>
-                  <span>Langsung konsultasi WA</span>
-                </div>
+                <p className="hero-price-note">Project web mulai <strong>Rp300 ribu</strong>.</p>
               </Reveal>
             </div>
 
-            <Reveal delay={0.14} className="hero-panel-wrap">
-              <aside className="hero-panel">
-                <div className="hero-panel-head">
-                  <div>
-                    <div className="panel-kicker">SOLUSI BERBASIS WEB</div>
-                    <h2>Tidak harus tahu istilah teknisnya.</h2>
-                  </div>
+            <Reveal delay={0.12} className="hero-visual-wrap">
+              <figure className="hero-visual">
+                <img
+                  src="https://images.pexels.com/photos/8069510/pexels-photo-8069510.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Perempuan berhijab bekerja menggunakan laptop di ruang kerja modern"
+                />
+                <div className="hero-visual-shade" />
+                <div className="hero-visual-top">
+                  <span>UNTUK KEBUTUHAN NYATA</span>
                   <span className="panel-mark">TD</span>
                 </div>
-
-                <p className="panel-intro">
-                  Ceritakan kebutuhanmu. Kami bantu pilih bentuk website atau sistem yang paling masuk akal.
-                </p>
-
-                <div className="capability-list">
-                  {heroCapabilities.map(([index, title, description]) => (
-                    <div className="capability-row" key={index}>
-                      <span className="capability-index">{index}</span>
-                      <div>
-                        <strong>{title}</strong>
-                        <p>{description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="panel-foot">
-                  <span>Mulai dari</span>
-                  <strong>Rp300 ribu</strong>
-                </div>
-              </aside>
+                <figcaption className="hero-visual-card">
+                  <span className="hero-visual-label">MULAI DARI KEBUTUHAN</span>
+                  <h2>Kamu ceritakan masalahnya. Kami bantu bentuk solusinya.</h2>
+                  <div className="hero-visual-tags">
+                    <span>Website</span>
+                    <span>Dashboard</span>
+                    <span>LMS</span>
+                    <span>Sistem Custom</span>
+                  </div>
+                </figcaption>
+              </figure>
             </Reveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="quality-strip" aria-label="Keunggulan singkat">
-        <div className="container quality-grid">
-          <div className="quality-item">
-            <span className="quality-no">01</span>
-            <div><strong>Harga bersahabat</strong><p>Mulai Rp300 ribu dengan scope yang dijelaskan dari awal.</p></div>
-          </div>
-          <div className="quality-item">
-            <span className="quality-no">02</span>
-            <div><strong>Tetap terlihat profesional</strong><p>Desain rapi, responsive, dan tidak terasa seperti template asal jadi.</p></div>
-          </div>
-          <div className="quality-item">
-            <span className="quality-no">03</span>
-            <div><strong>Gampang mulai</strong><p>Tidak punya brief? Ceritakan kebutuhan lewat WhatsApp, kami bantu arahkan.</p></div>
           </div>
         </div>
       </section>
@@ -132,12 +95,12 @@ export default async function HomePage() {
             <Reveal>
               <div>
                 <div className="eyebrow">KARYA PILIHAN</div>
-                <h2 className="section-title">Lihat project nyata, bukan sekadar janji.</h2>
+                <h2 className="section-title">Project yang sudah bisa dibuka.</h2>
               </div>
             </Reveal>
             <Reveal delay={0.08}>
               <p className="lead">
-                Tiga project berikut bisa dibuka langsung. Lihat sendiri kualitas tampilan dan pengalaman yang sudah dibuat.
+                Bukan mockup. Klik preview untuk melihat versi live dan alurnya langsung.
               </p>
             </Reveal>
           </div>
@@ -204,12 +167,12 @@ export default async function HomePage() {
             <Reveal>
               <div>
                 <div className="eyebrow">LAYANAN</div>
-                <h2 className="section-title">Dari website sampai sistem custom.</h2>
+                <h2 className="section-title">Yang bisa kami bangun.</h2>
               </div>
             </Reveal>
             <Reveal delay={0.08}>
               <p className="lead">
-                Pilih sesuai kebutuhan. Kalau belum tahu istilahnya, cukup ceritakan masalahnya — kami bantu tentukan solusinya.
+                Dari halaman sederhana sampai sistem web dengan data, login, dan admin.
               </p>
             </Reveal>
           </div>
@@ -250,11 +213,11 @@ export default async function HomePage() {
           <div className="value-header">
             <Reveal>
               <div className="eyebrow dark-eyebrow">KENAPA TEMAN DIGITAL</div>
-              <h2>Rapi dilihat. Jelas dipakai. Masuk akal untuk kebutuhanmu.</h2>
+              <h2>Yang kami jaga di setiap project.</h2>
             </Reveal>
             <Reveal delay={0.08}>
               <p>
-                Kami tidak menumpuk fitur supaya terlihat canggih. Fokusnya adalah membuat solusi berbasis web yang terasa tepat dan mudah digunakan.
+                Hasil akhirnya harus terlihat rapi, mudah dipakai, dan tetap masuk akal untuk kebutuhan sebenarnya.
               </p>
             </Reveal>
           </div>
@@ -278,9 +241,9 @@ export default async function HomePage() {
           <div className="process-sticky">
             <Reveal>
               <div className="eyebrow">PROSES</div>
-              <h2 className="section-title">Santai ngobrolnya. Jelas pengerjaannya.</h2>
+              <h2 className="section-title">Dari cerita sampai tayang.</h2>
               <p className="lead">
-                Kamu tidak perlu datang dengan brief teknis. Ceritakan masalah atau kebutuhan, lalu kami bantu rapikan arah project-nya.
+                Kamu cukup bawa kebutuhan. Kami bantu menyusun scope, mengerjakan, lalu review sebelum tayang.
               </p>
             </Reveal>
           </div>
@@ -305,12 +268,12 @@ export default async function HomePage() {
             <Reveal>
               <div>
                 <div className="eyebrow">KISARAN HARGA</div>
-                <h2 className="section-title">Harga jelas. Hasil tetap terlihat serius.</h2>
+                <h2 className="section-title">Mulai dari Rp300 ribu.</h2>
               </div>
             </Reveal>
             <Reveal delay={0.08}>
               <p className="lead">
-                Mulai Rp300 ribu sampai Rp700 ribu. Cocok untuk yang ingin tampil profesional tanpa harus masuk budget jutaan.
+                Pilih titik mulai yang paling dekat dengan kebutuhanmu. Scope final disepakati sebelum pengerjaan.
               </p>
             </Reveal>
           </div>
@@ -357,7 +320,7 @@ export default async function HomePage() {
       <section className="final-cta">
         <div className="container final-cta-inner">
           <Reveal>
-            <div className="eyebrow">MULAI DARI CERITA</div>
+            <div className="eyebrow">SIAP MULAI?</div>
             <h2>{settings.final_cta_title}</h2>
             <p>{settings.final_cta_description}</p>
             <div className="hero-actions final-actions">
@@ -367,7 +330,7 @@ export default async function HomePage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Chat WhatsApp <span>↗</span>
+                Ceritakan Project <span>↗</span>
               </a>
               <Link className="button" href="/start-project">Isi Kebutuhan Singkat</Link>
             </div>

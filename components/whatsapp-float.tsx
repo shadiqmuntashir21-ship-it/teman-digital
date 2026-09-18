@@ -10,6 +10,6 @@ export function WhatsAppFloat(){
 
   return <a className="wa-float" href={WA} target="_blank" rel="noreferrer" aria-label="Chat Teman Digital lewat WhatsApp">
     <span className="wa-dot">WA</span>
-    <span className="wa-label">Konsultasi</span>
+    <span className="wa-label">Chat</span>
   </a>;
 }
