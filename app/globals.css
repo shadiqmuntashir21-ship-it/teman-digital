@@ -239,7 +239,7 @@ button{color:inherit}
 .work-section{background:#f5f3ee}
 .project-showcase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
 .featured-work{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr)}
-.featured-work .portfolio-thumb{aspect-ratio:auto;min-height:430px}
+.featured-work .portfolio-thumb{aspect-ratio:16/9;min-height:0}
 .featured-work .portfolio-copy{display:flex;flex-direction:column;justify-content:center;padding:38px}
 .featured-work .portfolio-copy h3{font-size:34px}
 .featured-work .portfolio-copy p{font-size:15px;line-height:1.72}
@@ -254,9 +254,9 @@ button{color:inherit}
 .portfolio-card:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(18,24,38,.08)}
 .portfolio-card{position:relative}
 .portfolio-card::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.42)}
-.portfolio-thumb{display:block;position:relative;aspect-ratio:16/10;overflow:hidden;background:#e9edf3}
-.portfolio-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
-.portfolio-card:hover .portfolio-thumb img{transform:scale(1.025)}
+.portfolio-thumb{display:flex;align-items:center;justify-content:center;position:relative;aspect-ratio:16/9;overflow:hidden;padding:14px;background:linear-gradient(145deg,#e8ebf0,#f4f3ef)}
+.portfolio-thumb img{width:100%;height:100%;object-fit:contain;display:block;border-radius:12px;box-shadow:0 10px 28px rgba(18,24,38,.10);transition:filter .3s ease}
+.portfolio-card:hover .portfolio-thumb img{filter:saturate(1.025) contrast(1.01)}
 .portfolio-placeholder{
   height:100%;display:grid;place-items:center;text-align:center;padding:24px;
   font-size:clamp(30px,4vw,56px);font-weight:720;letter-spacing:-.05em;
@@ -491,7 +491,8 @@ button{color:inherit}
 .danger{color:#b83333;border-color:#e6bcbc}
 .status-pill{display:inline-flex;padding:6px 9px;border-radius:999px;background:#ececf1;font:500 9px/1 "DM Mono",monospace;text-transform:uppercase}
 .admin-preview{aspect-ratio:16/9;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#ecece7;margin-bottom:16px}
-.admin-preview img{width:100%;height:100%;object-fit:cover}
+.admin-preview{padding:8px;background:linear-gradient(145deg,#e8ebf0,#f5f4f0)}
+.admin-preview img{width:100%;height:100%;object-fit:contain;border-radius:9px}
 .metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .metric{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
 .metric strong{font-size:34px;display:block;letter-spacing:-.05em}
@@ -510,7 +511,7 @@ button{color:inherit}
   .quality-item:last-child{border-bottom:0}
   .project-showcase-grid{grid-template-columns:1fr}
   .featured-work{grid-column:auto;grid-template-columns:1fr}
-  .featured-work .portfolio-thumb{min-height:0;aspect-ratio:16/10}
+  .featured-work .portfolio-thumb{min-height:0;aspect-ratio:16/9}
   .featured-work .portfolio-copy{padding:24px}
   .service-card-grid{grid-template-columns:1fr 1fr}
   .value-grid{grid-template-columns:1fr 1fr}
@@ -557,6 +558,8 @@ button{color:inherit}
   .section-head{margin-bottom:34px}
 
   .portfolio-card{border-radius:18px}
+  .portfolio-thumb{padding:8px}
+  .portfolio-thumb img{border-radius:9px}
   .portfolio-copy{padding:20px}
   .featured-work .portfolio-copy{padding:20px}
   .featured-work .portfolio-copy h3{font-size:25px}
